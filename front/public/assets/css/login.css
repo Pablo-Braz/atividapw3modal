@@ -317,6 +317,7 @@ textarea:focus {
 }
 
 .btn-signin {
+    color: azure;
     float: left;
     padding-top: 8px;
     width: 100%;
