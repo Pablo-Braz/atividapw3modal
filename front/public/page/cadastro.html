@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/login.css">
+<link rel="stylesheet" href="../assets/css/cadastrodeusuario.css">
 
 <body>
     <div class="frame">
@@ -9,7 +9,7 @@
             </ul>
         </div>
         <div>
-            <form id="formUsuario" action="" method="post" name="form">
+            <form id="formUsuario" method="post" name="form">
                 <label for="fullname">Nome Completo</label>
                 <input class="form-styling" type="text" id="fullname" placeholder="Digite seu nome completo" required />
 
@@ -17,7 +17,8 @@
                 <input class="form-styling" type="email" id="email" placeholder="Digite seu e-mail" required />
 
                 <label for="dlno">Telefone</label>
-                <input class="form-styling" type="text" id="dlno" placeholder="Digite o número da sua carteira de motorista" required />
+                <input class="form-styling" type="text" id="dlno"
+                    placeholder="Digite o número da sua carteira de motorista" required />
 
                 <label for="password">Crie uma Senha</label>
                 <input class="form-styling" type="password" id="password" placeholder="Crie uma senha" required />
@@ -27,6 +28,10 @@
         </div>
     </div>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="../assets/js/cadastrousuario.js"></script>
 </body>
+
 </html>

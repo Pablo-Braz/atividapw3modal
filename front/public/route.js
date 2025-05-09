@@ -18,7 +18,24 @@ const rotas = [
         path: '/veiculo/cadastro',
         component: '/page/veiculo/cadastro.html',
         showMenu: true // Exibir o menu
-    }
+    },
+    {
+    path: '/usuario/cadastro',
+    component: '/page/usuario/cadastro.html',
+    showMenu: false// Exibir o menu
+    },
+       {
+    path: '/usuario/login',
+    component: '/page/usuario/login.html',
+    showMenu: false// Exibir o menu
+    },
+    {
+    path: '/home',
+    component: '/page/home.html',
+    showMenu: true // Exibir o menu na página home
+}
+
+    
 ];
 
 const rotear = (rotaUrl) => {

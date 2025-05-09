@@ -1,6 +1,12 @@
 {
-  "usuario":[
- 
+  "usuario": [
+    {
+      "id": "d87b",
+      "fullname": "gabriel",
+      "email": "gabriel@gmail.com",
+      "telefone": "12555666",
+      "senha": "c2cc8cf56054bd4c2da9495ce4e87d47593400206751fb82de021d706a6f34a3"
+    }
   ],
   "categoria": [
     {
