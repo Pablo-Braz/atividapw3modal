@@ -1,13 +1,13 @@
 const rotas = [
     {
         path: '',
-        component: '/page/login.html',
-        showMenu: false // Não exibir o menu na página de login
+        component: '/page/home.html',
+        showMenu: true // Exibir o menu por padrão
     },
     {
         path: '/',
-        component: '/page/login.html',
-        showMenu: false // Não exibir o menu na página de login
+        component: '/page/home.html',
+        showMenu: true // Exibir o menu por padrão
     },
     {
         path: '/teste',
@@ -20,20 +20,20 @@ const rotas = [
         showMenu: true // Exibir o menu
     },
     {
-    path: '/usuario/cadastro',
-    component: '/page/usuario/cadastro.html',
-    showMenu: false// Exibir o menu
-    },
-       {
-    path: '/usuario/login',
-    component: '/page/usuario/login.html',
-    showMenu: false// Exibir o menu
+        path: '/usuario/cadastro',
+        component: '/page/cadastro.html',
+        showMenu: false // Não exibir o menu
     },
     {
-    path: '/home',
-    component: '/page/home.html',
-    showMenu: true // Exibir o menu na página home
-}
+        path: '/usuario/login',
+        component: '/page/login.html',
+        showMenu: false // Não exibir o menu
+    },
+    {
+        path: '/home',
+        component: '/page/home.html',
+        showMenu: true // Exibir o menu na página home
+    },
 
     
 ];

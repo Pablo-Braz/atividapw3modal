@@ -9,10 +9,6 @@ $(document).ready(() => {
         console.log('E-mail digitado:', email);
         console.log('Senha digitada:', senha);
 
-        // Encripta a senha fornecida pelo usuário com SHA-256
-        const senhaEncriptada = CryptoJS.SHA256(senha).toString();
-        console.log('Senha encriptada:', senhaEncriptada);
-
         try {
             // Faz uma requisição GET para buscar todos os usuários cadastrados
             const resposta = await fetch("http://localhost:3000/usuario");
@@ -25,16 +21,21 @@ $(document).ready(() => {
             const usuarios = await resposta.json(); // Converte a resposta para JSON
             console.log('Usuários cadastrados:', usuarios);
 
-            // Verifica se o usuário existe e a senha está correta
+            // Verifica se o usuário existe e a senha está correta (sem encriptação)
             const usuarioEncontrado = usuarios.find(
-                usuario => usuario.email === email && usuario.senha === senhaEncriptada
+                usuario => usuario.email === email && usuario.senha === senha
             );
 
             console.log('Usuário encontrado:', usuarioEncontrado);
 
             if (usuarioEncontrado) {
+                // Definir o tipo de usuário no localStorage
+                // 1 para admin, 2 para usuário comum
+                const tipoUsuario = usuarioEncontrado.admin ? 1 : 2;
+                localStorage.setItem('userData', tipoUsuario);
+                
                 alert('Login realizado com sucesso!');
-                // Redireciona para outra página ou realiza outra ação
+                // Redireciona para outra página
                 window.location.href = '/home';
             } else {
                 alert('E-mail ou senha inválidos.');

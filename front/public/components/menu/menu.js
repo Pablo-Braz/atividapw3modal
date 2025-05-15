@@ -1,18 +1,20 @@
-// Função para carregar o menu a partir de um arquivo HTML
 import { loadJS } from '/assets/js/helpers.js';
 
-export const loadMenu = async (containerMenuId, tipo = 'default') => {
-    try {
-        // Verificar se a rota atual é a página de login
-        if (window.location.pathname === '/page/login.html') {
-            const container = document.getElementById(containerMenuId);
-            if (container) {
-                container.style.display = 'none'; // Esconde o menu
-            }
-            console.log('Menu ocultado na página de login.');
-            return; // Não carregar o menu
-        }
+export const loadMenu = async (containerMenuId) => {
+    let tipo;
 
+    // Recupera e converte o valor de userData para número
+    const userData = parseInt(localStorage.getItem('userData'), 10);
+
+    if (userData === 1) {
+        tipo = 'admin'; // Tipo de menu para administradores
+    } else if (userData === 2) {
+        tipo = 'logado'; // Tipo de menu para usuários comuns
+    } else {
+        tipo = 'default'; // Tipo de menu para visitantes
+    }
+
+    try {
         const response = await fetch(`/components/menu/menu-${tipo}.html`);
         if (!response.ok) {
             throw new Error(`Erro ao carregar o menu: ${response.statusText}`);

@@ -1,11 +1,19 @@
 {
   "usuario": [
     {
-      "id": "d87b",
-      "fullname": "gabriel",
+      "id": "1",
+      "fullname": "Gabriel Faria",
       "email": "gabriel@gmail.com",
-      "telefone": "12555666",
-      "senha": "c2cc8cf56054bd4c2da9495ce4e87d47593400206751fb82de021d706a6f34a3"
+      "senha": "adm13",
+      "admin": true
+    },
+    {
+      "id": "b352",
+      "fullname": "pablo",
+      "email": "pbraz0460@gmail.com",
+      "telefone": "15777",
+      "senha": "tauz",
+      "admin": false
     }
   ],
   "categoria": [
