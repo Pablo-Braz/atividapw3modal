@@ -53,13 +53,13 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <i>
-                        <a class="dropdown-item" href="/">
-                            <i class="bi bi-person-circle"></i>
-                            <span>user-logado@gmail.com</span>
+                        <a class="dropdown-item" href="/" id="editarPerfilBtn">
+                            <img id="iconePerfilMenu" src="https://img.icons8.com/bubbles/100/000000/user.png" alt="Perfil" style="width:32px; height:32px; border-radius:50%; object-fit:cover;">
+                            <span id="usuarioLogadoNome"></span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="/">
+                        <a class="dropdown-item" href="#" id="botãodesair">
                             <i class="bi bi-box-arrow-right"></i>
                             <span>Sair</span>
                         </a>
@@ -79,3 +79,34 @@
     </div>
   </div>
 </nav>
+
+<!-- Modal de edição de perfil -->
+<div class="modal fade" id="modalEditarPerfil" tabindex="-1" aria-labelledby="modalEditarPerfilLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form id="formEditarPerfil">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEditarPerfilLabel">Editar Perfil</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3 text-center">
+            <img id="previewImagemPerfil" src="https://img.icons8.com/bubbles/100/000000/user.png" alt="Pré-visualização" style="width: 100px; height: 100px; border-radius: 50%;">
+          </div>
+          <div class="mb-3">
+            <label for="novoNomeUsuario" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="novoNomeUsuario" required>
+          </div>
+          <div class="mb-3">
+            <label for="imagemPerfil" class="form-label">Imagem de Perfil</label>
+            <input type="file" class="form-control" id="imagemPerfil" accept="image/*">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="/assets/js/login.js"></script>

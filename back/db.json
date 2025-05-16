@@ -13,7 +13,8 @@
       "email": "pbraz0460@gmail.com",
       "telefone": "15777",
       "senha": "tauz",
-      "admin": false
+      "admin": false,
+      "imagemPerfil": null
     }
   ],
   "categoria": [
