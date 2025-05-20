@@ -1,3 +1,18 @@
+// Função para exibir alertas Bootstrap
+function exibirAlerta(mensagem, tipo = 'success') {
+    // Remove alertas antigos
+    $('.alert').remove();
+    // Cria o alerta
+    const alerta = `
+        <div class="alert alert-${tipo} alert-dismissible fade show mt-3" role="alert">
+            ${mensagem}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+        </div>
+    `;
+    // Adiciona o alerta antes do formulário
+    $('#formUsuario').before(alerta);
+}
+
 $(document).ready(() => {
     // Função para limpar o formulário
     const limparFormulario = () => {
@@ -31,21 +46,27 @@ $(document).ready(() => {
         // Envia os dados para a API
         fetch("http://localhost:3000/usuario", requestOptions)
             .then(response => {
-                if (response.ok) {
-                    exibirAlerta('Usuário cadastrado com sucesso!', 'success');
-                    limparFormulario();
-                    setTimeout(() => {
-                        window.location.href = './login.html'; // Redireciona para a página de login
-                    }, 2000); // Aguarda 2 segundos antes de redirecionar
-                } else {
+                if (!response.ok) {
                     throw new Error('Erro ao cadastrar o usuário.');
                 }
-                return response.json();
+                return response.json(); // <- Pega o usuário criado
             })
-            .then(result => console.log(result))
+            .then(result => {
+                exibirAlerta('Usuário cadastrado com sucesso! Redirecionando...', 'success');
+                limparFormulario();
+                // Salva os dados do usuário no localStorage
+                localStorage.setItem('userData', 2); // tipo comum
+                localStorage.setItem('idUsuario', result.id);
+                localStorage.setItem('fullname', result.fullname);
+                localStorage.setItem('emailUsuario', result.email);
+                setTimeout(() => {
+                    window.location.href = '/'; // Redireciona para o menu logado
+                }, 2000);
+            })
             .catch(error => {
                 console.error('Erro:', error);
                 exibirAlerta('Erro ao cadastrar o usuário.', 'danger');
             });
     });
 });
+

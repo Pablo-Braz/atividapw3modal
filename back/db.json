@@ -8,13 +8,12 @@
       "admin": true
     },
     {
-      "id": "b352",
+      "id": "f290",
       "fullname": "pablo",
       "email": "pbraz0460@gmail.com",
-      "telefone": "15777",
-      "senha": "tauz",
-      "admin": false,
-      "imagemPerfil": null
+      "telefone": "15988810",
+      "senha": "tauztauz",
+      "admin": false
     }
   ],
   "categoria": [
@@ -218,6 +217,28 @@
         "http://localhost:3037/uploads/1745925059191.webp",
         "http://localhost:3037/uploads/1745925049374.jfif",
         "http://localhost:3037/uploads/1745925054169.png"
+      ]
+    },
+    {
+      "id": "4cf5",
+      "modelo": "fuscaaaa",
+      "ano": 2024,
+      "preco": 1222222,
+      "descricao": "fgdfgdf",
+      "cor": "verde",
+      "quilometragem": 500000,
+      "potencia": 50,
+      "motor": "1.80",
+      "cambio": "Manual",
+      "direcao": "Hidráulica",
+      "tracao": "Dianteira",
+      "categoriaId": 3,
+      "montadoraId": 1,
+      "avaliacao": 5,
+      "destaque": false,
+      "disponivel": true,
+      "imagem": [
+        "http://localhost:3037/uploads/1747739792662.png"
       ]
     }
   ]
