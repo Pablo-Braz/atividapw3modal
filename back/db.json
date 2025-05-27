@@ -14,7 +14,24 @@
       "telefone": "15988810",
       "senha": "tauztauz",
       "admin": false
+    },
+    {
+      "id": "d37e",
+      "fullname": "caucau",
+      "email": "caucau@gmail.com",
+      "telefone": "15988067",
+      "senha": "caca",
+      "admin": false
+    },
+    {
+      "id": "834a",
+      "fullname": "caucauss",
+      "email": "caucau@gmail.com",
+      "telefone": "15988067",
+      "senha": "tauztauz",
+      "admin": false
     }
+   
   ],
   "categoria": [
     {
