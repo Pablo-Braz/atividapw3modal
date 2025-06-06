@@ -13,7 +13,8 @@
       "email": "pbraz0460@gmail.com",
       "telefone": "15988810",
       "senha": "tauztauz",
-      "admin": false
+      "admin": false,
+      "imagemPerfil": "http://localhost:3037/upload/usuario/usuario_1749242318403.jpg"
     },
     {
       "id": "d37e",
@@ -30,8 +31,32 @@
       "telefone": "15988067",
       "senha": "tauztauz",
       "admin": false
+    },
+    {
+      "id": "7617",
+      "fullname": "Karpas",
+      "email": "valeriauzumaki38@gmail.com",
+      "telefone": "15996008548",
+      "senha": "misfits85.",
+      "admin": true,
+      "imagemPerfil": "http://localhost:3037/upload/usuario/usuario_1749242404280.jpg"
+    },
+    {
+      "id": "8f66",
+      "fullname": "dfdfdfdf",
+      "email": "valeriauzumaki38@gmail.com",
+      "telefone": "15988888",
+      "senha": "misfits85.",
+      "admin": false
+    },
+    {
+      "id": "d754",
+      "fullname": "pvsdhch",
+      "email": "valeriauzumaki38@gmail.com",
+      "telefone": "235235",
+      "senha": "misfits85.",
+      "admin": false
     }
-   
   ],
   "categoria": [
     {
@@ -256,6 +281,30 @@
       "disponivel": true,
       "imagem": [
         "http://localhost:3037/uploads/1747739792662.png"
+      ]
+    },
+    {
+      "id": "2315",
+      "modelo": "Honda Civic",
+      "ano": 2025,
+      "preco": 50000,
+      "descricao": "CARRO CLASSICO",
+      "cor": "Red",
+      "quilometragem": 100000,
+      "potencia": 45,
+      "motor": "2.8",
+      "cambio": "Automático",
+      "direcao": "Elétrica",
+      "tracao": "Traseira",
+      "categoriaId": 3,
+      "montadoraId": 5,
+      "avaliacao": 4,
+      "destaque": false,
+      "disponivel": true,
+      "imagem": [
+        "http://localhost:3037/uploads/1749242539803.png",
+        "http://localhost:3037/uploads/1749242539819.jpg",
+        "http://localhost:3037/uploads/1749242519442.jpg"
       ]
     }
   ]
