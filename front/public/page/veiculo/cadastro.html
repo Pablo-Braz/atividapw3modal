@@ -225,10 +225,10 @@ const exibirAlerta = (mensagem, tipo) => {
 // Atualize o evento de envio do formulário
 $('#formVeiculo').on('submit', function (e) {
     e.preventDefault(); // Evita o envio padrão do formulário
-    let fotosSelecionadas =[];
+    let fotosSelecionadas = [];
 
-    // Pega todas as imagens selecionadas
-    $('.listaDeFotosVeiculos').each(function() {
+    // Pega a ordem ATUAL das imagens no DOM (após arraste)
+    $('#imagensVeiculos img').each(function() {
         fotosSelecionadas.push($(this).attr('src'));
     });
 
@@ -250,7 +250,7 @@ $('#formVeiculo').on('submit', function (e) {
         avaliacao: parseFloat($('#avaliacao').val()),
         destaque: $('#destaque').is(':checked'),
         disponivel: $('#disponivel').is(':checked'),
-        imagem: fotosSelecionadas // Adiciona as imagens selecionadas
+        imagem: fotosSelecionadas // Adiciona as imagens selecionadas na ordem correta
     };
 
 

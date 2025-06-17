@@ -56,6 +56,14 @@
       "telefone": "235235",
       "senha": "misfits85.",
       "admin": false
+    },
+    {
+      "id": "d990",
+      "fullname": "pablo",
+      "email": "pbraz0460@gmail.com",
+      "telefone": "159888",
+      "senha": "123456",
+      "admin": false
     }
   ],
   "categoria": [
@@ -305,6 +313,30 @@
         "http://localhost:3037/uploads/1749242539803.png",
         "http://localhost:3037/uploads/1749242539819.jpg",
         "http://localhost:3037/uploads/1749242519442.jpg"
+      ]
+    },
+    {
+      "id": "c061",
+      "modelo": "asdas",
+      "ano": 2025,
+      "preco": 313,
+      "descricao": "",
+      "cor": "verde",
+      "quilometragem": 145,
+      "potencia": 121,
+      "motor": "12",
+      "cambio": "Manual",
+      "direcao": "Mecânica",
+      "tracao": "Traseira",
+      "categoriaId": 2,
+      "montadoraId": 2,
+      "avaliacao": 21,
+      "destaque": false,
+      "disponivel": true,
+      "imagem": [
+        "http://localhost:3037/uploads/1750155992564.png",
+        "http://localhost:3037/uploads/1750155992561.png",
+        "http://localhost:3037/uploads/1750155992557.jpg"
       ]
     }
   ]
